@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
+import ProductsTable from "../../components/ProductsTable/ProductsTable"
 
 const Products = () => {
   return (
     <div>
-        <Link to={"/"} className="underline">Anasayfa</Link>
+      <ProductsTable/>
     </div>
   )
 }

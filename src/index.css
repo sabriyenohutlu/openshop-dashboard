@@ -24,4 +24,31 @@
 	a {
 		@apply text-sky-500 hover:underline;
 	}
+	.panel {
+        @apply relative rounded-sm bg-white p-5 shadow dark:bg-black;
+    }
+	.table-responsive {
+        @apply overflow-auto;
+    }
+    table {
+        @apply w-full !border-collapse;
+    }
+    table thead tr,
+    table tfoot tr {
+        @apply border-b-0 ;
+    }
+    table thead tr th,
+    table tfoot tr th,
+    table tbody tr td {
+        @apply py-3 px-4 ltr:text-left rtl:text-right;
+    }
+    table thead tr th,
+    table tfoot tr th {
+        @apply font-semibold;
+    }
+    table tbody tr {
+        @apply border-b ;
+    }
+    
+ 
 }

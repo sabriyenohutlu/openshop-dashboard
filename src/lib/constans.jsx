@@ -5,60 +5,67 @@ import {
 	HiOutlineUsers,
 	HiOutlineDocumentText,
 	HiOutlineAnnotation,
-	HiOutlineQuestionMarkCircle,
-	HiOutlineCog
+	HiOutlineCog,
+	HiOutlineUserGroup,
+	HiOutlineUserCircle  
 } from 'react-icons/hi'
 
 export const DASHBOARD_SIDEBAR_LINKS = [
 	{
-		key: 'dashboard',
-		label: 'Dashboard',
+		key: 'anasayfa',
+		label: 'Anasayfa',
 		path: '/',
 		icon: <HiOutlineViewGrid />
 	},
 	{
-		key: 'products',
-		label: 'Products',
-		path: '/products',
+		key: 'urunler',
+		label: 'Ürünler',
+		path: '/urunler',
 		icon: <HiOutlineCube />
 	},
 	{
-		key: 'orders',
-		label: 'Orders',
-		path: '/orders',
+		key: 'urun-ekle',
+		label: 'Ürün Ekle',
+		path: '/urun-ekle',
 		icon: <HiOutlineShoppingCart />
 	},
 	{
-		key: 'customers',
-		label: 'Customers',
-		path: '/customers',
-		icon: <HiOutlineUsers />
+		key: 'müsteriler',
+		label: 'Müşteriler',
+		path: '/musteriler',
+		icon: <HiOutlineUserGroup />
 	},
 	{
-		key: 'transactions',
-		label: 'Transactions',
-		path: '/transactions',
+		key: 'siparisler',
+		label: 'Siparişler',
+		path: '/siparisler',
 		icon: <HiOutlineDocumentText />
 	},
 	{
-		key: 'messages',
-		label: 'Messages',
-		path: '/messages',
+		key: 'kullancilar',
+		label: 'Kullanıcılar',
+		path: '/kullanicilar',
+		icon: <HiOutlineUsers />
+	},
+	{
+		key: 'mesajlar',
+		label: 'Mesajlar',
+		path: '/mesajlar',
 		icon: <HiOutlineAnnotation />
 	}
 ]
 
 export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
 	{
-		key: 'settings',
-		label: 'Settings',
-		path: '/settings',
+		key: 'ayarlar',
+		label: 'Ayarlar',
+		path: '/ayarlar',
 		icon: <HiOutlineCog />
 	},
 	{
-		key: 'support',
-		label: 'Help & Support',
-		path: '/support',
-		icon: <HiOutlineQuestionMarkCircle />
-	}
+		key: 'profil',
+		label: 'Profilim',
+		path: '/profilim',
+		icon: <HiOutlineUserCircle />
+	},
 ]
