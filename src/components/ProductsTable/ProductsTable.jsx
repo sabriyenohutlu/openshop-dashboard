@@ -1,4 +1,18 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProductData } from "../../store/product-actions";
 const ProductsTable = () => {
+  const dispatch = useDispatch();
+
+  const productData = useSelector((state)=>state.product.products)
+  const totalQuantity = useSelector((state)=>state.product.totalQuantity)
+
+  useEffect(() => {
+    dispatch(fetchProductData());
+  }, [dispatch]);
+
+  console.log(totalQuantity,productData)
+
   return (
     <div className="panel">
       <div className="table-responsive">

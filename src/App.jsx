@@ -12,6 +12,7 @@ import Users from "./pages/Users/Users";
 import Customers from "./pages/Customers/Customers";
 import Settings from "./pages/Settings/Settings";
 import MyProfile from "./pages/MyProfile/MyProfile";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,6 +66,7 @@ const router = createBrowserRouter([
   }
 ]);
 const App = () => {
+
   return (
     <div>
       <RouterProvider router={router} />
