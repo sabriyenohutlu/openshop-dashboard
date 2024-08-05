@@ -7,7 +7,9 @@ import {
 	HiOutlineAnnotation,
 	HiOutlineCog,
 	HiOutlineUserGroup,
-	HiOutlineUserCircle  
+	HiOutlineUserCircle,
+	HiOutlineSpeakerphone,
+	HiOutlineCollection 
 } from 'react-icons/hi'
 
 export const DASHBOARD_SIDEBAR_LINKS = [
@@ -28,6 +30,19 @@ export const DASHBOARD_SIDEBAR_LINKS = [
 		label: 'Ürün Ekle',
 		path: '/urun-ekle',
 		icon: <HiOutlineShoppingCart />
+	},
+	{
+		key:"kampanlar",
+		label:"Kampanyalar",
+		path:"/kampanyalar",
+		icon: <HiOutlineSpeakerphone/>
+	},
+	{
+		key:"kategoriler",
+		label:"Kategoriler",
+		path:"/kategoriler",
+		icon: <HiOutlineCollection />
+		
 	},
 	{
 		key: 'müsteriler',

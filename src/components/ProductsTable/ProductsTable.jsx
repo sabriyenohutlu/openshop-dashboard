@@ -1,17 +1,19 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductData } from "../../store/product-actions";
+import { HiExternalLink } from "react-icons/hi";
+
 const ProductsTable = () => {
   const dispatch = useDispatch();
 
-  const productData = useSelector((state)=>state.product.products)
-  const totalQuantity = useSelector((state)=>state.product.totalQuantity)
+  const productData = useSelector((state) => state.product.products);
+  const totalQuantity = useSelector((state) => state.product.totalQuantity);
 
   useEffect(() => {
     dispatch(fetchProductData());
   }, [dispatch]);
 
-  console.log(totalQuantity,productData)
+  console.log(totalQuantity, productData);
 
   return (
     <div className="panel">
@@ -19,25 +21,29 @@ const ProductsTable = () => {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Date</th>
-              <th>Sale</th>
-              <th className="text-center">Status</th>
-              <th className="text-center">Action </th>
+              <th>Ürün Adı</th>
+              <th>Ürün Fiyatı</th>
+              <th>Ürün Kampanyası</th>
+              <th>Ürün Kategorisi</th>
+              <th className="text-start">Durum</th>
+              <th className="text-start">İşlemler </th>
             </tr>
           </thead>
           <tbody>
-            <template>
-              <tr>
-                <td className="whitespace-nowrap">Ürün1</td>
-                <td>Ürün1</td>
-                <td>Ürün1</td>
-                <td className="text-center whitespace-nowrap">Ürün1</td>
-                <td className="text-center">
-                  <button type="button">Düzenle</button>
+            {productData.map((product, idx) => (
+              <tr key={idx}>
+                <td className="whitespace-nowrap">{product.productName}</td>
+                <td>{product.productPrice}</td>
+                <td>{product.productCampain}</td>
+                <td className="text-center whitespace-nowrap">{product.productCategory}</td>
+                <td>Durum</td>
+                <td className="py-2">
+                  <button className="text-center" type="button"><HiExternalLink size={20}/></button>
+                  <button className="text-center px-2" type="button">Güncelle</button>
+                  <button className="text-center px-2" type="button">Sil</button>
                 </td>
               </tr>
-            </template>
+            ))}
           </tbody>
         </table>
       </div>

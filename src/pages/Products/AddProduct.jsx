@@ -1,7 +1,8 @@
+import ProductForm from "../../components/ProductForm/ProductForm"
 
 const AddProduct = () => {
   return (
-    <div>AddProduct</div>
+    <ProductForm/>
   )
 }
 

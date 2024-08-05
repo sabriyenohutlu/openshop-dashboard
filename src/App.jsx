@@ -12,6 +12,8 @@ import Users from "./pages/Users/Users";
 import Customers from "./pages/Customers/Customers";
 import Settings from "./pages/Settings/Settings";
 import MyProfile from "./pages/MyProfile/MyProfile";
+import Campains from "./pages/Campains/Campains";
+import Categories from "./pages/Categories/Categories";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "/urun-ekle",
         element: <AddProduct />,
+      },
+      {
+        path: "/kampanyalar",
+        element: <Campains />,
+      },
+      {
+        path: "/kategoriler",
+        element: <Categories />,
       },
       {
         path: "/musteriler",

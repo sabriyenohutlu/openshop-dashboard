@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import './tailwind.css'
 import  store from "../src/store/index.jsx";
 import { Provider } from 'react-redux';
 
