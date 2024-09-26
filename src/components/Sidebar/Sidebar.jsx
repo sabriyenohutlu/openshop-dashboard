@@ -16,14 +16,39 @@ const Sidebar = () => {
         <FcBullish fontSize={24} />
         <span className="text-neutral-200 text-lg">OpenShop</span>
       </div>
+    
       <div className="py-8 flex flex-1 flex-col gap-0.5">
         {DASHBOARD_SIDEBAR_LINKS.map((link) => (
-          <SidebarLink key={link.key} label={link.label} path={link.path} icon={link.icon} />
+          <SidebarLink
+            key={link.key}
+            label={link.label}
+            path={link.path}
+            icon={link.icon}
+          />
         ))}
       </div>
+     
+        {DASHBOARD_SIDEBAR_LINKS.map((link) => (
+         link.nested && 
+         link.nesteds.map((link)=>(
+         <SidebarLink
+            key={link.key}
+            label={link.label}
+            path={link.path}
+            icon={link.icon}
+          />)))
+        )}
+
       <div className="flex flex-col gap-0.5 pt-2 border-t border-neutral-700">
         {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => {
-          return (<SidebarLink key={link.key} label={link.label} path={link.path} icon={link.icon}/>)
+          return (
+            <SidebarLink
+              key={link.key}
+              label={link.label}
+              path={link.path}
+              icon={link.icon}
+            />
+          );
         })}
         <div className={classNames(linkClass, "cursor-pointer text-red-500")}>
           <span className="text-xl">
