@@ -19,6 +19,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Anasayfa",
     path: "/",
     icon: <HiOutlineViewGrid />,
+    nested:false
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Ürünler",
     path: "/urunler",
     icon: <HiOutlineCube />,
+    nested:false
   },
   {
     id: 3,
@@ -33,17 +35,17 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Ürün Ekle",
     path: "/urun-ekle",
     icon: <HiOutlineShoppingCart />,
-    nested: true,
+    nested:true,
     nesteds: [
       {
         label: "Tek Ürün Ekle",
-		key:"tek-urun-ekle",
+        key: "tek-urun-ekle",
         path: "urun-ekle/tek-urun-ekle",
         icon: <HiOutlineShoppingCart />,
       },
       {
         label: "Çoklu Ürün Ekle",
-		key:"cok-urun-ekle",
+        key: "cok-urun-ekle",
         path: "urun-ekle/cok-urun-ekle",
         icon: <HiOutlineShoppingCart />,
       },
@@ -55,6 +57,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Kampanyalar",
     path: "/kampanyalar",
     icon: <HiOutlineSpeakerphone />,
+    nested:false
   },
   {
     id: 5,
@@ -62,6 +65,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Kategoriler",
     path: "/kategoriler",
     icon: <HiOutlineCollection />,
+    nested:false
   },
   {
     id: 6,
@@ -69,6 +73,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Müşteriler",
     path: "/musteriler",
     icon: <HiOutlineUserGroup />,
+    nested:false
   },
   {
     id: 7,
@@ -76,6 +81,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Siparişler",
     path: "/siparisler",
     icon: <HiOutlineDocumentText />,
+    nested:false
   },
   {
     id: 8,
@@ -83,6 +89,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Kullanıcılar",
     path: "/kullanicilar",
     icon: <HiOutlineUsers />,
+    nested:false
   },
   {
     id: 9,
@@ -90,6 +97,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Mesajlar",
     path: "/mesajlar",
     icon: <HiOutlineAnnotation />,
+    nested:false
   },
 ];
 
